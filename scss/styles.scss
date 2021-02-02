@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background: url(../images/bg-intro-desktop.png), var(--red);
+}
+:root {
+// ## Colors
+// ### Primary
+--red: hsl(0, 100%, 74%) ;
+--green: hsl(154, 59%, 51%);
+// ### Accent
+--blue: hsl(248, 32%, 49%);
+// ### Neutral
+--darkBlue: hsl(249, 10%, 26%) ;
+--grayishBlue: hsl(246, 25%, 77%);
+}
+.container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;  
+    .left {
+        color: #fff;
+        align-self: center;
+        max-width: 420px;
+        h1 {
+            font-size: 38px;
+            font-weight: 700;
+        }
+        p {
+            font-size: 13px;
+        }
+    }
+    .right {
+        max-width: 430px;
+        button {
+            outline: none;
+            cursor: pointer;
+            border:none;
+            width: 100%;
+            padding: 15px 30px;
+            border-radius: 7px;
+        }
+        .btn-try {
+            margin-bottom: 20px;
+            background-color: var(--blue);
+            color: #fff;
+            font-weight: 700;
+            box-shadow: 0 8px 0 0 hsla(249, 10%, 26%, 0.3) ;
+            span {
+                color: var(--grayishBlue);
+                font-weight: 400;
+            }
+        }
+        form {
+            border-radius: 7px;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 8px 0 0 hsla(249, 10%, 26%, 0.3) ;
+                input {
+                    margin-bottom: 15px;
+                    // margin-bottom: 4px;
+                    padding: 10px;
+                    // width: 100%;
+                    width: 93%;
+                    border: 1px solid var(--grayishBlue);
+                    outline: none;
+                    border-radius: 4px;
+                    
+                    &::placeholder {
+                        font-weight: 600;
+                        color: var(--darkBlue);
+                    }
+                }
+                .grupo__nombre,
+                .grupo__apellido,
+                .grupo__correo,
+                .grupo__password {    
+                    position: relative;
+                }
+                .p__nombre,
+                .p__apellido,
+                .p__correo,
+                .p__password {
+                display: none;
+                }
+                .pIconrrecto {
+                    display: block;
+                    text-align: right;
+                    margin-top: -10px;
+                    margin-bottom: 12px;
+                    font-style: italic;
+                    color: var(--red);
+                    font-weight: 600;
+                }
+                .img__nombre,
+                .img__apellido,
+                .img__correo,
+                .img__password {
+                    display: none;
+                }
+                
+                .img__apellido.incorrecto,
+                .img__correo.incorrecto,
+                .img__password.incorrecto,
+                .img__nombre.incorrecto {
+                    display: block;
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    top: 0;
+                    right: 10px;
+                }
+                
+                .btn-claim {
+                    background-color: var(--green);
+                    color: #fff;
+                    text-transform: uppercase;
+                    margin-bottom: 5px;
+                    box-shadow: 1px 2px 0 0 inset hsla(249, 10%, 26%, .2), -1px -2px 0 0 inset hsla(249, 10%, 26%, .2) ;
+                }
+                p {
+                    font-size: 8px;    
+                    text-align: center;
+                    color: var(--grayishBlue);
+                    a {
+                        text-decoration: none;
+                        color: var(--red);
+                        font-weight: 700;
+                    }
+                }
+        }
+
+    }
+}
+
+// Estilos para validación
+
+@media screen and (max-width: 767px){
+    .container {
+        flex-wrap: wrap;
+        margin-top: 200px;
+        .left {
+            h1 {
+                text-align: center;
+                font-size: 34px;
+            }
+            p {
+                text-align: center;
+            }
+        }
+    }
+    br {
+        display: none;
+    }
+}
+

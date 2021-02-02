@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+  <!-- My styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <div class="left">
+      <h1>Learn to code by <br> watching others</h1>
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable. </p>
+    </div>
+    <div class="right">
+      <button class="btn-try">
+        Try it free 7 days <span>then $20/mo. thereafter</span>
+      </button>
+      <form id="formulario">
+        <label class="grupo__nombre" id="grupo__nombre" for="nombre">
+          <input type="text" placeholder="First Name" name="nombre"> 
+          <img class="img__nombre" src="./images/icon-error.svg" >
+          <p class="p__nombre">First Name cannot be empty</p>
+        </label>
+        <label class="grupo__apellido id="grupo__apellido" for="apellido">
+          <input type="text" placeholder="Last Name " name="apellido">
+          <img class="img__apellido" src="./images/icon-error.svg" >
+          <p class="p__apellido">Last Name cannot be empty</p>
+        </label>
+        <label class="grupo__correo" id="grupo__correo" for="correo">
+          <input type="email" placeholder="Email Address" name="correo">
+          <img class="img__correo" src="./images/icon-error.svg" >
+          <p class="p__correo">Looks like this is not an email</p>
+        </label>
+        <label class="grupo__password" id="grupo__password" for="password">
+          <input type="password" placeholder="Password" name="password">
+          <img class="img__password" src="./images/icon-error.svg" >
+          <p class="p__password">Password cannot be empty</p>
+        </label>
+        <button type="submit" class="btn-claim">
+          Claim your free trial 
+        </button>
+        <p>By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
+      </form>
+          
+    </div>
+
+  </main>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Gabriel 😎</a>.
+    </p>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+</html>
